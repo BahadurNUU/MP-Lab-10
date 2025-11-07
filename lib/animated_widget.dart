@@ -16,7 +16,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
     setState(() {
       width = width == 150 ? 200 : 150;
       height = height == 150 ? 200 : 150;
-      color = color == Colors.deepOrangeAccent ? Colors.redAccent : Colors.deepOrangeAccent;
+      color = color == Colors.lightGreen ? Colors.redAccent : Colors.lightGreen;
     });
   }
 
@@ -24,7 +24,11 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
   Widget build(BuildContext context) {
     return Center(child: GestureDetector(
       onTap: _changeContainer,
-      child: AnimatedContainer(width: width, height: height, color: color, duration: const Duration(milliseconds: 300), curve: Curves.easeOut)
+      child: AnimatedContainer(
+        width: width, 
+        height: height, 
+        color: color, 
+        duration: const Duration(milliseconds: 300), curve: Curves.easeOut),
 
     ),);
   }
